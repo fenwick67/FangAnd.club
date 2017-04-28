@@ -1,0 +1,20 @@
+head
+  title Fang and .Club
+  link(rel="stylesheet",href="style.css")
+body
+  h1 Fang and .Club
+  small A free ebook site
+  noscript (the save buttons won't work with noscript, but everything else should :) )
+  table#book-list
+    tbody
+      each title in bookTitles
+        tr(data-title=title)
+          td
+            a(href="/books/html/"+title+'.html', title="Read in your browser")= title
+          td
+            a.icon.txt(href="/books/txt/"+title+'.txt', title="Download .TXT") 📝 txt
+          td
+            a.icon.mobi(href="/books/mobi/"+title+'.mobi', title="Download .MOBI") 📙 mobi
+  script(src="script.js")
+
+  small made with 💀 by Jack London
